@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.red {
+  color: #f00;
+}
+.blue {
+  color: #00f;
+}
+.green {
+  color: #008000;
+}
+.gray {
+  color: #808080;
+}
+.table {
+  width: 500px;
+  height: 500px;
+
+  background: #fff;
+  padding: 3px;
+/* 8x8 */
+/* 12x12 */
+/* 16x16 */
+}
+.table .column {
+  display: block;
+}
+.table .cell {
+  background: #ccc;
+  border: 2px outset #666;
+  display: inline;
+  float: left;
+  position: relative;
+  height: 100%;
+}
+.table .cell.open {
+  border-style: inset;
+  opacity: 0.8;
+}
+.table .cell.open .text {
+  display: block;
+}
+.table .cell.bomb {
+  background: #f00;
+}
+.table .cell .text {
+  text-align: center;
+  display: none;
+  padding-top: 5px;
+}
+.table.small .cell {
+  width: 12.5%;
+  height: 12.5%;
+}
+.table.small .column {
+  height: 12.5%;
+}
+.table.medium .cell {
+  width: 8.33%;
+  height: 8.33%;
+}
+.table.medium .column {
+  height: 8.33%;
+}
+.table.big .cell {
+  width: 6.25%;
+}
+.table.big .column {
+  height: 6.25%;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Campo minado</title>
+  <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body ng-controller="MainController">
+
+  <div class="table big">
+    <div class="column" ng-repeat="(x, column) in table">
+      <div class="cell"
+          ng-repeat="(y, cell) in column"
+          ng-class="{
+            open: cell.isOpen(),
+            bomb: cell.isBomb() && cell.isOpen()
+          }"
+          ng-click="open(cell)">
+
+          <span ng-show=" !cell.isBomb()" class="text">{{cell.value}}</span>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="jquery/jquery-1.12.1.min.js"></script>
+  <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  <script src="angular/angular.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+</html>
